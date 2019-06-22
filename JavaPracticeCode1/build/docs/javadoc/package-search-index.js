@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.sumit.java.practice.code"},{"l":"com.sumit.java.practice.code.executor"},{"l":"JavaPracticeCode1"}]
