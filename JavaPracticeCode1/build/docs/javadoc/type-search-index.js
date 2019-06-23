@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.sumit.java.practice.code","l":"ContactValueObject"},{"p":"com.sumit.java.practice.code","l":"CRUDOperations"},{"p":"com.sumit.java.practice.code","l":"CRUDOperationsImplementation"},{"p":"com.sumit.java.practice.code.executor","l":"Executor"},{"p":"JavaPracticeCode1","l":"Library"}]
