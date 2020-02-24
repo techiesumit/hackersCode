@@ -4,7 +4,9 @@ import java.util.List;
 
 public class DecompressesArray {
     public int[] decompressRLElist(int[] nums) {
+        // Create a List to contain the output f
         List<Integer> outList=new ArrayList<Integer>();
+        // Check if the Edge Cases are covered and all the conditions are met.
         if(nums.length >=2  && nums.length <=100 && (nums.length % 2 ==0)) {
             int frequency=0;
             int value=0;
@@ -12,7 +14,8 @@ public class DecompressesArray {
                 frequency=nums[i];
                 i++;
                 value=nums[i];
-                if(frequency > 0 && value >0){
+                // Check if the Frequenecy is greater than zero
+                if(frequency > 0){
                     for (int j = 0; j < frequency; j++) {
                         outList.add(value);
                     }
@@ -23,14 +26,15 @@ public class DecompressesArray {
         {
             System.out.println("Array lenght is not in the range ");
         }
-       // Integer returnArray[]= Integer[]  outList.toArray();
+      // Use the Stream classes to convert the ArrayList to int Array
         return outList.stream().mapToInt(Integer::intValue).toArray();
-      //  return Arrays.stream(returnArray).mapToInt(Integer::intValue).toArray();
+      
     }
 
     public static void main(String[] args) {
         CompressesArray compressesArray = new CompressesArray();
-        int arrray[]= new int[] {1,2,3,4};
+        int arrray[]= new int[] {1,2,3,4, 0,5};
+        //Use Stream to display the value.
         Arrays.stream(compressesArray.decompressRLElist(arrray)).forEach(intvalue->System.out.println(intvalue+" "));
     }
 }
