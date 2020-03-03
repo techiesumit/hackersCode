@@ -26,6 +26,9 @@ public class DecompressesArray {
         {
             System.out.println("Array lenght is not in the range ");
         }
+
+       
+      //  return outList.stream().mapToInt(Integer::intValue).toArray();
       // Use the Stream classes to convert the ArrayList to int Array
         return outList.stream().mapToInt(Integer::intValue).toArray();
       
@@ -36,5 +39,6 @@ public class DecompressesArray {
         int arrray[]= new int[] {1,2,3,4, 0,5};
         //Use Stream to display the value.
         Arrays.stream(compressesArray.decompressRLElist(arrray)).forEach(intvalue->System.out.println(intvalue+" "));
+
     }
 }
