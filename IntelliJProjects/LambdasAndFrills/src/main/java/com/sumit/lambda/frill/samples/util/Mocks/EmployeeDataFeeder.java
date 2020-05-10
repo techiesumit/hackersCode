@@ -3,7 +3,6 @@ package com.sumit.lambda.frill.samples.util.Mocks;
 import com.sumit.lambda.frill.samples.model.Departments;
 import com.sumit.lambda.frill.samples.model.Employee;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,9 +23,7 @@ public class EmployeeDataFeeder {
         Employee e11 = new Employee(11, 68, "O", "Melissa", "Roy", 5764.99, Departments.Operations);
         Employee e12 = new Employee(12, 79, "O", "Alex", "Gussin", 4322.11, Departments.Technology);
 
-        List<Employee> employees = new ArrayList<Employee>();
-        employees.addAll(Arrays.asList(new Employee[]{e1, e2,e12, e13, e14, e3, e4, e5, e6, e7, e8, e9, e10, e11}));
-        return employees;
+       return (Arrays.asList(new Employee[]{e1, e2,e12, e13, e14, e3, e4, e5, e6, e7, e8, e9, e10, e11}));
     }
 
 }
