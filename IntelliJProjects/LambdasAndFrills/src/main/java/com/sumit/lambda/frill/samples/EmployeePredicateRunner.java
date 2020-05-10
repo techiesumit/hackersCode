@@ -17,15 +17,26 @@ public class EmployeePredicateRunner {
     public void filterEmployees(Predicate<Employee> predicate) {
         List<Employee> filterEmps = employees.stream()
                 .filter(predicate)
-                .collect(Collectors.toList());
-        filterEmps.stream().forEach(System.out::println);
+                .collect(Collectors.toList()); // Collecting the list of Items
+        filterEmps.stream().forEach(System.out::println); // Printing the list (How to combine the two stream operations ??)
     }
+
     public void filterEmployeesMultipleConditions(Predicate<Employee> predicate1, Predicate<Employee> predicate2) {
         List<Employee> filterEmps = employees.stream()
-                .filter(predicate1.or(predicate2))
+                .filter(predicate1.or(predicate2)) // and and not are also available.
                 .collect(Collectors.toList());
         filterEmps.stream().forEach(System.out::println);
+        //??? How to combine the above to operations
     }
 
-
+    // Pass Multiple Predicate using PredicateCollections multiPredicate
+    public  <T> T findAnyMatch(Predicate<T> predicate) {
+        T[] list = null;
+        for (T element : list) {
+            if (predicate.test(element)) {
+                return element;
+            }
+        }
+        return null;
+    }
 }

@@ -16,6 +16,7 @@ public class Employee {
     private String firstName;
     private String lastName;
     private double salary;
+    private Departments department;
 
     @Override
     public String toString() {
@@ -26,6 +27,7 @@ public class Employee {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
+                ", department=" + department +
                 '}';
     }
 }
